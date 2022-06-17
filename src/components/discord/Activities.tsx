@@ -1,6 +1,5 @@
 import { SpotifyLogo } from 'phosphor-react';
 import { useLanyard } from 'use-lanyard';
-import '../index.css';
 
 function Activities() {
   const discordUserData = useLanyard('847865068657836033');

@@ -1,6 +1,5 @@
 import { useMemo } from 'react';
 import { useLanyard } from 'use-lanyard';
-import '../index.css';
 
 const StatusColor = {
   online: 'bg-online',

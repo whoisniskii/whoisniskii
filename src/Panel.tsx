@@ -1,7 +1,7 @@
 import { useLanyard } from 'use-lanyard';
-import { Activities } from './discord/Activities';
-import { Avatar } from './discord/Avatar';
-import { Profile } from './discord/Profile';
+import { Activities } from './components/discord/Activities';
+import { Avatar } from './components/discord/Avatar';
+import { Profile } from './components/Profile';
 
 function Panel() {
   const presence = useLanyard('847865068657836033');
