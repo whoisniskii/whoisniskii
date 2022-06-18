@@ -7,7 +7,7 @@ function Activities() {
   return (
     <div>
       {discordUserData?.data?.listening_to_spotify && (
-        <div className="mt-6">
+        <div className="mt-6 w-full">
           <h5 className="ml-1 mb-1 text-sm font-bold text-gray-200">Listening on Spotify</h5>
           <div className="flex flex-row items-center rounded-lg overflow-hidden p-4 bg-[rgba(0,0,0,.2)]">
             <div className="w-20 h-20 min-w-[5rem] flex items-center justify-center relative mr-4">

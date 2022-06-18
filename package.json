@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "dev": "vite --port 2000",
+    "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "types:check": "npx tsc --noEmit --incremental false",
