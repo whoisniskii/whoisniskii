@@ -1,5 +1,6 @@
 import { useLanyard } from 'use-lanyard';
 import { CustomActivity } from './activity/Custom';
+import { GameActivity } from './activity/Game';
 import { SpotifyActivity } from './activity/Spotify';
 
 function DiscordActivities() {
@@ -7,8 +8,9 @@ function DiscordActivities() {
 
   return (
     <div>
-      {discordUserData?.data?.listening_to_spotify && <SpotifyActivity />}
       {discordUserData?.data?.activities.find(x => x.type === 4) && <CustomActivity />}
+      {discordUserData?.data?.activities.find(x => x.type === 0) && <GameActivity />}
+      {discordUserData?.data?.listening_to_spotify && <SpotifyActivity />}
     </div>
   );
 }

@@ -16,7 +16,13 @@ function DiscordStatus() {
   }, [discordUserData]);
 
   return (
-    <div className={`absolute h-6 w-6 -bottom-1 -right-1 border-[3px] border-[#1f1f1f] rounded-full mb-6 mx-5 sm:mb-3 sm:mr-7 ${StatusColor[userData?.discord_status as keyof typeof StatusColor]}`} />
+    <div>
+      {userData?.discord_status && (
+        <div
+          className={`absolute h-6 w-6 -bottom-1 -right-1 border-[3px] border-[#1f1f1f] rounded-full mb-6 mx-5 sm:mb-3 sm:mr-7 ${StatusColor[userData?.discord_status as keyof typeof StatusColor]}`}
+        />
+      )}
+    </div>
   );
 }
 

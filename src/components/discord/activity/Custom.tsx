@@ -12,7 +12,7 @@ function CustomActivity() {
         {activity?.emoji && <img className="inline-block" src={`https://cdn.discordapp.com/emojis/${activity.emoji?.id}.png`} alt={activity.emoji?.name} height={20} width={20} />}
       </div>
 
-      {activity?.state && <span className="flex gap-2 ml-1 mb-1 font-sans antialiased text-sm"> {activity.state}</span>}
+      {activity?.state && <span className="flex gap-2 ml-1 mb-1 text-sm text-gray-300"> {activity.state}</span>}
     </div>
   );
 }
