@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 import { useLanyard } from 'use-lanyard';
-import mainLogo from '../../assets/avatar.png';
+import mainLogo from '../../assets/bb3829fa4cfbc14f765bdf45405ec2f2.png';
 import { DiscordStatus } from './Status';
 
 function DiscordAvatar() {

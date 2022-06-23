@@ -18,6 +18,7 @@ function DiscordName() {
       ) : (
         <h4 className="text-xl font-bold leading-6">
           <a href="https://discord.com/users/847865068657836033">Niskii</a>
+          <span className="font-normal text-gray-400 text-lg">#6694</span>
         </h4>
       )}
     </div>
