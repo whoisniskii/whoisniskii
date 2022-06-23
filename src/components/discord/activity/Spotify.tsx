@@ -1,4 +1,3 @@
-import { SpotifyLogo } from 'phosphor-react';
 import { useLanyard } from 'use-lanyard';
 
 function SpotifyActivity() {
@@ -10,7 +9,6 @@ function SpotifyActivity() {
       <div className="flex flex-row items-center rounded-lg overflow-hidden p-4 bg-[rgba(0,0,0,.2)]">
         <div className="w-20 h-20 min-w-[5rem] flex items-center justify-center relative mr-4">
           <img className="rounded-xl" src={`${discordUserData?.data?.spotify?.album_art_url}`} alt={`${discordUserData?.data?.spotify?.song} art`} />
-          <SpotifyLogo className="w-7 h-7 border-1 rounded-full bg-black border-black absolute bottom-[-7px] right-[-7px]" />
         </div>
         <div>
           <a href={`https://open.spotify.com/track/${discordUserData?.data?.spotify?.track_id}`}>
