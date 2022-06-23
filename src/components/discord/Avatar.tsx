@@ -1,5 +1,6 @@
 import { useMemo } from 'react';
 import { useLanyard } from 'use-lanyard';
+import mainLogo from '../../assets/avatar.png';
 import { DiscordStatus } from './Status';
 
 function DiscordAvatar() {
@@ -21,7 +22,7 @@ function DiscordAvatar() {
             alt={`${userData?.data?.discord_user.username}#${userData?.data?.discord_user.discriminator}`}
           />
         ) : (
-          <img className="w-28 h-28 rounded-full mb-4 sm:mb-0 sm:mr-4" src="./src/assets/avatar.png" alt={`${userData?.data?.discord_user.username}#${userData?.data?.discord_user.discriminator}`} />
+          <img className="w-28 h-28 rounded-full mb-4 sm:mb-0 sm:mr-4" src={mainLogo} alt={`${userData?.data?.discord_user.username}#${userData?.data?.discord_user.discriminator}`} />
         )}
 
         <DiscordStatus />
