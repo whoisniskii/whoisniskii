@@ -1,29 +1,11 @@
-import { useMemo } from 'react';
-import { useLanyard } from 'use-lanyard';
-import mainLogo from '../../assets/bb3829fa4cfbc14f765bdf45405ec2f2.png';
+import mainLogo from '../../assets/a_3d12ddf1401c69d888d004daac41f5b5.gif';
 import { DiscordStatus } from './Status';
 
 function DiscordAvatar() {
-  const discordUserData = useLanyard('847865068657836033');
-
-  const userData = useMemo(() => {
-    return discordUserData;
-  }, [discordUserData]);
-
   return (
     <div>
       <div className="min-w-[5rem] relative inline-block">
-        {userData.data?.discord_user.avatar ? (
-          <img
-            className="w-28 h-28 rounded-full mb-4 sm:mb-0 sm:mr-4"
-            src={`https://cdn.discordapp.com/avatars/${userData?.data?.discord_user.id}/${userData?.data?.discord_user.avatar}${
-              userData?.data?.discord_user.avatar.startsWith('a_') ? '.gif' : '.png'
-            }?size=128`}
-            alt={`${userData?.data?.discord_user.username}#${userData?.data?.discord_user.discriminator}`}
-          />
-        ) : (
-          <img className="w-28 h-28 rounded-full mb-4 sm:mb-0 sm:mr-4" src={mainLogo} alt={`${userData?.data?.discord_user.username}#${userData?.data?.discord_user.discriminator}`} />
-        )}
+        <img className="w-28 h-28 rounded-full mb-4 sm:mb-0 sm:mr-4" src={mainLogo} alt="My avatar" />
 
         <DiscordStatus />
       </div>
