@@ -1,11 +1,11 @@
 import { useMemo } from 'react';
-import { useLanyard } from 'use-lanyard';
+import { getPresence } from '../../utils';
 
 function DiscordName() {
-  const discordUserData = useLanyard('847865068657836033');
+  const discordUserData = getPresence();
 
   const userData = useMemo(() => {
-    return discordUserData.data;
+    return discordUserData;
   }, [discordUserData]);
 
   return (
@@ -26,4 +26,3 @@ function DiscordName() {
 }
 
 export { DiscordName };
-

@@ -1,9 +1,9 @@
-import { useLanyard } from 'use-lanyard';
+import { getPresence } from '../../../utils';
 
 function CustomActivity() {
-  const discordUserData = useLanyard('847865068657836033');
+  const discordUserData = getPresence();
 
-  const activity = discordUserData?.data?.activities.find(x => x.type === 4);
+  const activity = discordUserData?.activities.find(x => x.type === 4);
 
   return (
     <div className="mt-6 w-full">

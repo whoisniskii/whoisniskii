@@ -1,11 +1,11 @@
-import { useLanyard } from 'use-lanyard';
+import { getPresence } from '../utils';
 import { DiscordActivities } from './discord/Activities';
 import { DiscordAvatar } from './discord/Avatar';
 import { Loading } from './Loading';
 import { Profile } from './Profile';
 
 function Panel() {
-  const presence = useLanyard('847865068657836033');
+  const presence = getPresence();
 
   return (
     <div>

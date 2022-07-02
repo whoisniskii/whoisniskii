@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import { useLanyard } from 'use-lanyard';
+import { getPresence } from '../../utils';
 
 const StatusColor = {
   online: 'bg-online',
@@ -9,10 +9,10 @@ const StatusColor = {
 };
 
 function DiscordStatus() {
-  const discordUserData = useLanyard('847865068657836033');
+  const discordUserData = getPresence();
 
   const userData = useMemo(() => {
-    return discordUserData?.data;
+    return discordUserData;
   }, [discordUserData]);
 
   return (

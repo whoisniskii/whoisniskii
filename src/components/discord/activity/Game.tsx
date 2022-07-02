@@ -1,10 +1,9 @@
-import { useLanyard } from 'use-lanyard';
-import { formatTimestamp } from '../../../utils';
+import { formatTimestamp, getPresence } from '../../../utils';
 
 function ActivityImage() {
-  const discordUserData = useLanyard('847865068657836033');
+  const discordUserData = getPresence();
 
-  const activity = discordUserData.data?.activities.find(x => x.type === 0);
+  const activity = discordUserData?.activities.find(x => x.type === 0);
 
   if (activity?.application_id && activity.assets?.large_image) {
     return (
@@ -16,9 +15,9 @@ function ActivityImage() {
 }
 
 function GameActivity() {
-  const discordUserData = useLanyard('847865068657836033');
+  const discordUserData = getPresence();
 
-  const activity = discordUserData.data?.activities.find(x => x.type === 0);
+  const activity = discordUserData?.activities.find(x => x.type === 0);
 
   return (
     <div className="mt-6 w-full">
