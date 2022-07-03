@@ -1,4 +1,4 @@
-import { Data, useLanyardWs } from 'use-lanyard';
+import { useLanyardWs } from 'use-lanyard';
 
 export function formatTimestamp(start: number) {
   const current = Math.floor((Date.now() - start) / 1000);
@@ -15,13 +15,6 @@ export function formatTimestamp(start: number) {
   })}:${Math.floor(current % 60).toLocaleString('en-US', { minimumIntegerDigits: 2, useGrouping: false })} elapsed`;
 }
 
-let cachedPresence: Data | undefined;
-
 export function getPresence() {
-  if (cachedPresence) {
-    return cachedPresence;
-  }
-
-  cachedPresence = useLanyardWs('847865068657836033');
-  return cachedPresence;
+  return useLanyardWs('847865068657836033');
 }
