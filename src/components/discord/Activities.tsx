@@ -9,9 +9,9 @@ function DiscordActivities() {
     <div>
       {activity ? (
         <div>
-          {activity?.activities.find(x => x.type === 4) && <CustomActivity />}
+          {activity?.activities.find(x => x.type === 4)?.state && <CustomActivity />}
           {/* {activity?.activities.find(x => x.type === 0) && <GameActivity />} */}
-          {activity?.activities.find(x => x.type === 2) && <SpotifyActivity />}
+          {activity?.activities.find(x => x.type === 2)?.assets?.large_image && <SpotifyActivity />}
         </div>
       ) : null}
     </div>

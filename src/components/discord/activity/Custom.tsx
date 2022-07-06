@@ -5,7 +5,7 @@ function CustomActivity() {
 
   return (
     <div className="mt-6 w-full">
-      {activity && (
+      {activity?.state && (
         <div>
           <h5 className="ml-1 mb-1 antialiased text-xs font-bold uppercase text-gray-400">Custom status</h5>
           <div className="flex gap-2 items-center mt-2">
