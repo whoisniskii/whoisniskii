@@ -2,7 +2,6 @@ import { DiscordName } from './discord/Name';
 import { Email } from './socials/Email';
 import { GitHub } from './socials/GitHub';
 import { Instagram } from './socials/Instagram';
-import { Spotify } from './socials/Spotify';
 import { Twitter } from './socials/Twitter';
 
 function Profile() {
@@ -14,7 +13,6 @@ function Profile() {
           <GitHub />
           <Instagram />
           <Twitter />
-          <Spotify />
           <Email />
         </div>
       </div>
