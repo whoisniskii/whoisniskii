@@ -1,5 +1,6 @@
 import { getPresence } from '../../utils';
 import { CustomActivity } from './activity/Custom';
+import { GameActivity } from './activity/Game';
 import { SpotifyActivity } from './activity/Spotify';
 
 function DiscordActivities() {
@@ -10,7 +11,7 @@ function DiscordActivities() {
       {activity ? (
         <div>
           {activity?.activities.find(x => x.type === 4)?.state && <CustomActivity />}
-          {/* {activity?.activities.find(x => x.type === 0) && <GameActivity />} */}
+          {activity?.activities.find(x => x.type === 0) && <GameActivity />}
           {activity?.activities.find(x => x.type === 2)?.assets?.large_image && <SpotifyActivity />}
         </div>
       ) : null}
